@@ -11,8 +11,5 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    ".vitepress/theme/**/*.ts",
-    ".vitepress/theme/**/*.vue"
-  ]
+  "include": [".vitepress/theme/**/*.ts", ".vitepress/theme/**/*.vue"]
 }

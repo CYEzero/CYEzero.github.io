@@ -19,8 +19,5 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "uno.config.ts",
-    ".vitepress/config.ts"
-  ]
+  "include": ["uno.config.ts", ".vitepress/config.ts"]
 }

@@ -5,6 +5,5 @@ import 'virtual:uno.css'
 import './style.css'
 
 export default {
-  Layout
+  Layout,
 } satisfies Theme
-
