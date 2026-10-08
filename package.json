@@ -4,19 +4,22 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "dev": "vitepress dev",
+    "typecheck": "vue-tsc -b",
+    "build": "npm run typecheck && vitepress build",
+    "preview": "vitepress preview"
   },
   "dependencies": {
     "vue": "^3.5.42"
   },
   "devDependencies": {
     "@types/node": "^24.13.3",
-    "@vitejs/plugin-vue": "^6.0.8",
+    "@vitejs/plugin-vue": "5.2.4",
     "@vue/tsconfig": "^0.9.1",
     "typescript": "~6.0.2",
-    "vite": "^8.3.0",
+    "unocss": "66.10.5",
+    "vite": "5.4.21",
+    "vitepress": "1.6.4",
     "vue-tsc": "^3.3.11"
   }
 }
