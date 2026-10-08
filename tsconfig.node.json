@@ -20,7 +20,6 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "vite.config.ts",
     "uno.config.ts",
     ".vitepress/config.ts"
   ]
