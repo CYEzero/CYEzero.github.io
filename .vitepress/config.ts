@@ -3,7 +3,7 @@ import UnoCSS from 'unocss/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'CYEzero',
+  title: '青之殿堂',
   description: 'Self Page',
 
   srcExclude: ['README.md'],
