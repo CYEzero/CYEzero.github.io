@@ -1,0 +1,50 @@
+:root {
+  --color-background: #f6f4ef;
+  --color-text: #20201d;
+  --color-muted: #686861;
+  --color-border: #dcd9d0;
+  --color-accent: #315947;
+}
+
+@font-face {
+  font-family: 'LXGW WenKai Mono';
+  src: url('/font/LXGWWenKaiMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'LXGW WenKai Mono', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+button {
+  font-family: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.site-container {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}

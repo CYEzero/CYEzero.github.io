@@ -12,4 +12,6 @@ export default defineConfig({
     configFile: false,
     plugins: [UnoCSS()],
   },
+
+  head: [['link', { rel: 'icon', href: 'images/favicon.ico' }]],
 })

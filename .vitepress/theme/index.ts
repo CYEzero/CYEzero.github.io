@@ -2,7 +2,8 @@
 import Layout from './Layout.vue'
 import type { Theme } from 'vitepress'
 import 'virtual:uno.css'
-import './style.css'
+import './styles/global.css'
+import './styles/markdown.css'
 
 export default {
   Layout,

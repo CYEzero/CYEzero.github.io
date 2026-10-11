@@ -1,20 +1,23 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import { homeNavigation, type HomeSectionId } from '../navigation'
+import { homeNavigation, type HomeSectionId } from '../data/navigation'
 
+// 组件挂载时，更新当前活动部分的 ID。
 const emit = defineEmits<{
   navigate: [sectionId: HomeSectionId]
 }>()
 
+// 函数 => 点击导航到指定部分。
 function handleNavigate(id: HomeSectionId) {
   emit('navigate', id)
 }
 
+// 获取站点数据，用于显示站点标题。
 defineProps<{
   activeSectionId: HomeSectionId | null
 }>()
 
-const { site } = useData()
+const { site, frontmatter } = useData()
 </script>
 
 <template>
@@ -25,17 +28,20 @@ const { site } = useData()
       </a>
 
       <nav aria-label="主导航" class="flex items-center gap-6 flex-wrap">
-        <button
-          v-for="item in homeNavigation"
-          :key="item.id"
-          :class="{ 'is-active': item.id === activeSectionId }"
-          :aria-current="item.id === activeSectionId ? 'location' : undefined"
-          type="button"
-          class="nav-item no-underline hover:underline underline-offset-4"
-          @click="handleNavigate(item.id)"
-        >
-          {{ item.label }}
-        </button>
+        <template v-if="frontmatter.home === true">
+          <button
+            v-for="item in homeNavigation"
+            :key="item.id"
+            :class="{ 'is-active': item.id === activeSectionId }"
+            :aria-current="item.id === activeSectionId ? 'location' : undefined"
+            type="button"
+            class="nav-item no-underline hover:underline underline-offset-4"
+            @click="handleNavigate(item.id)"
+          >
+            {{ item.label }}
+          </button>
+        </template>
+        <a v-else href="/" class="no-underline hover:underline underline-offset-4"> ← 返回首页 </a>
 
         <a
           href="https://github.com/CYEzero"

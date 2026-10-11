@@ -1,0 +1,45 @@
+.article_content .vp-code span {
+  color: var(--shiki-dark, inherit);
+}
+
+.article_content div[class*='language-'] {
+  position: relative;
+  margin: 1.5em 0;
+  background-color: var(--un-prose-pre-bg);
+  border-radius: 8px;
+}
+
+.article_content div[class*='language-'] > pre {
+  margin: 0;
+  padding-top: 3.5rem;
+}
+
+.article_content div[class*='language-'] > .lang {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-size: 12px;
+  color: #a8a29e;
+}
+
+.article_content div[class*='language-'] > button.copy {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  padding: 4px 10px;
+  min-width: 5rem;
+  font-size: 12px;
+  color: #e7e5e4;
+  background-color: transparent;
+  border: 1px solid #57534e;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.article_content div[class*='language-'] > button.copy::before {
+  content: '复制';
+}
+
+.article_content div[class*='language-'] > button.copy.copied::before {
+  content: '已复制';
+}
