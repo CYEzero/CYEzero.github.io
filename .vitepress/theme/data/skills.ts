@@ -20,7 +20,7 @@ export const skills: SkillsItem[] = [
     label: 'Web',
     technologies: ['Vite', 'Vue3', 'HTML', 'Javascript', 'Typescript', 'CSS'],
     description:
-      '交互逻辑倒还好，但页面视觉设计和繁琐的样式是真的要命。好在已经被AI大人一脚踢死了，当然本页面是我自己写的，最后一舞罢了。',
+      '交互逻辑倒还好，但页面视觉设计和繁琐的样式是真的要命。好在已经被AI大人一脚踢死了。当然本页面是我自己写的，最后一舞罢了。',
   },
   {
     id: 'StayTuned',
